@@ -1,0 +1,30 @@
+.menuIndex {
+    z-index: 100;
+}
+
+.root {
+    flex: 1;
+}
+
+.input {
+    outline: none;
+    background-color: transparent;
+    flex: 1;
+    color: white;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.tabs {
+    color: white;
+    font-weight: 700;
+}
+
+.tabs:hover {
+    background: none
+}
