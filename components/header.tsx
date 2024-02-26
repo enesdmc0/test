@@ -3,20 +3,28 @@ import React, {useEffect, useState} from 'react';
 import {ActionIcon, Avatar, Badge, Group, Indicator, Paper, Stack, Text, Title} from "@mantine/core";
 import styles from '../app/global.module.css';
 import {IconTrash} from "@tabler/icons-react";
-
 import {pb} from "../lib/pb";
 
+interface Props {
+    token: string
 
-const Header = () => {
+}
+
+const Header: React.FC<Props> = ({token}) => {
     const [isOpen, setIsOpen] = useState(false)
     const [messages, setMessages] = useState<any>([])
 
 
     useEffect(() => {
-        pb.collection('todos').subscribe('*', async (data: any) => {
-            console.log('data', data);
-            setMessages([...messages, data]);
-        });
+      if (token) {
+          pb.authStore.save(token);
+
+          pb.collection('todos').subscribe('*', function (x) {
+              console.log(x, "enes")
+              setMessages([...messages, x])
+          }
+            );
+      }
     }, [messages]);
     console.log(messages, "messages");
 

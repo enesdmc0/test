@@ -21,8 +21,8 @@ export default async function Home() {
         )
     }
     const user = JSON.parse(cookies().get("user")?.value as string);
+    const auth = JSON.parse(cookies().get("pb_auth")?.value as string);
 
-    console.log(isPb)
 
     const todos = await isPb?.collection('todos').getFullList();
 
@@ -32,7 +32,7 @@ export default async function Home() {
     return (
         <Box bg="gray.9" h="100vh">
             <Container fluid p="xl">
-                <Header />
+                <Header token={auth.token} />
                 <Space h="xl"/>
                 <Form userId={user.id} />
                 <Space h="xl"/>
