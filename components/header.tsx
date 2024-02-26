@@ -29,9 +29,6 @@ const Header: React.FC<Props> = ({token}) => {
     console.log(messages, "messages");
 
 
-    const handleUpdate = async (id: string) => {
-
-    }
 
 
     return (
@@ -52,10 +49,7 @@ const Header: React.FC<Props> = ({token}) => {
                                     <Group justify="space-between">
                                         <Text c="gray.2">{x.record.description}</Text>
                                         <Badge color="pink">{x.action}</Badge>
-                                        <ActionIcon onClick={() => handleUpdate(x.record.id)} variant="filled"
-                                                    bg="gray.7">
-                                            <IconTrash style={{width: '60%', height: '60%'}} stroke={1.5}/>
-                                        </ActionIcon>
+
                                     </Group>
                                 </Paper>
                             ))
