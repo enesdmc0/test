@@ -13,13 +13,14 @@ export default async function Home() {
 
     const isPb = await pbAuth();
 
-
-
+    console.log(isPb, "isPb---------------------")
+   
     if (!isPb) {
-        return (
-            redirect('/login')
-        )
+        redirect("/login");
     }
+
+
+   
     const user = JSON.parse(cookies().get("user")?.value as string);
     const auth = JSON.parse(cookies().get("pb_auth")?.value as string);
 

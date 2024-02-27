@@ -315,6 +315,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/crypto-js@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "@types/crypto-js@npm:4.2.2"
+  checksum: 760a2078f36f2a3a1089ef367b0d13229876adcf4bcd6e8824d00d9e9bfad8118dc7e6a3cc66322b083535e12be3a29044ccdc9603bfb12519ff61551a3322c6
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -332,9 +339,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^16.10.2":
-  version: 16.18.68
-  resolution: "@types/node@npm:16.18.68"
-  checksum: 4c7e65c78bc3893ff89a0761bf18f412080486ef31a8b62d7bc1b91551c8a4218dc4bf41443450318914758c58976ac19e969fd7dce019741f085547e83d1fb7
+  version: 16.18.83
+  resolution: "@types/node@npm:16.18.83"
+  checksum: 2c2e2d0307db556e4849f62a444e2cbf6acf0bd90a877ae823fb4e631f711759ee9179436c5391f15a66718e7d051057f1b77bfe7ee85d4b86becdd1e0bddfbc
   languageName: node
   linkType: hard
 
@@ -355,13 +362,13 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:*":
-  version: 18.2.45
-  resolution: "@types/react@npm:18.2.45"
+  version: 18.2.60
+  resolution: "@types/react@npm:18.2.60"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 4cc650c47ffb88baac29fb7a74e842e4af4a55f437086ef70250fdc75f0a5f2fcf8adc272d05ab2e00b1de6e14613296881271caee037dadf9130fdeb498c59e
+  checksum: e1d8763259c75ebcdf241dbbbfb7e8f606a8abdc98b1acf1a23e741681ebb20e82b490402a32ce10b81ce7e51f00f8009a162a72136333613b4f247549a3ab8d
   languageName: node
   linkType: hard
 
@@ -747,9 +754,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406":
-  version: 1.0.30001589
-  resolution: "caniuse-lite@npm:1.0.30001589"
-  checksum: 20debfb949413f603011bc7dacaf050010778bc4f8632c86fafd1bd0c43180c95ae7c31f6c82348f6309e5e221934e327c3607a216e3f09640284acf78cd6d4d
+  version: 1.0.30001591
+  resolution: "caniuse-lite@npm:1.0.30001591"
+  checksum: 21937d341c3d75994504db21340f65573a1e847a8ab33ee4964ed493994d6552864c494ba144485459abd9c711c75c0708bc9fa19f2bff525bff75ffb0a42c3b
   languageName: node
   linkType: hard
 
@@ -826,6 +833,13 @@ __metadata:
     shebang-command: "npm:^2.0.0"
     which: "npm:^2.0.1"
   checksum: 5738c312387081c98d69c98e105b6327b069197f864a60593245d64c8089c8a0a744e16349281210d56835bb9274130d825a78b2ad6853ca13cfbeffc0c31750
+  languageName: node
+  linkType: hard
+
+"crypto-js@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "crypto-js@npm:4.2.0"
+  checksum: 8fbdf9d56f47aea0794ab87b0eb9833baf80b01a7c5c1b0edc7faf25f662fb69ab18dc2199e2afcac54670ff0cd9607a9045a3f7a80336cccd18d77a55b9fdf0
   languageName: node
   linkType: hard
 
@@ -1146,14 +1160,14 @@ __metadata:
   linkType: hard
 
 "eslint-module-utils@npm:^2.7.4, eslint-module-utils@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "eslint-module-utils@npm:2.8.0"
+  version: 2.8.1
+  resolution: "eslint-module-utils@npm:2.8.1"
   dependencies:
     debug: "npm:^3.2.7"
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: c7a8d1a58d76ec8217a8fea49271ec8132d1b9390965a75f6a4ecbc9e5983d742195b46d2e4378231d2186801439fe1aa5700714b0bfd4eb17aac6e1b65309df
+  checksum: 1aeeb97bf4b688d28de136ee57c824480c37691b40fa825c711a4caf85954e94b99c06ac639d7f1f6c1d69223bd21bcb991155b3e589488e958d5b83dfd0f882
   languageName: node
   linkType: hard
 
@@ -2128,10 +2142,12 @@ __metadata:
     "@mantine/core": "npm:7.5.3"
     "@mantine/hooks": "npm:7.5.3"
     "@tabler/icons-react": "npm:^2.47.0"
+    "@types/crypto-js": "npm:^4.2.2"
     "@types/node": "npm:20.8.10"
     "@types/react": "npm:18.2.36"
     "@types/react-dom": "npm:18.2.14"
     cookies-next: "npm:^4.1.1"
+    crypto-js: "npm:^4.2.0"
     eslint: "npm:8.53.0"
     eslint-config-next: "npm:14.0.1"
     next: "npm:14.0.1"
@@ -2615,14 +2631,14 @@ __metadata:
   linkType: hard
 
 "react-number-format@npm:^5.3.1":
-  version: 5.3.2
-  resolution: "react-number-format@npm:5.3.2"
+  version: 5.3.3
+  resolution: "react-number-format@npm:5.3.3"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
     react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 0b73095be0bd1f6b7feb29480762f6c7884c9a6958d8572ca91b82e367d4ba593248a51949351bc0f6166078a4f26cf7afd7ca98a6d0026e99546b677b193c87
+  checksum: cfd853ffc80bbb8a87a52ac0e983a017bbee4cd0088cfc227c06d6902df64099a2555d95143dc458b0c3c4c8e59d7944258353d1d2fe622366293a0bf5108fe8
   languageName: node
   linkType: hard
 

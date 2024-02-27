@@ -20,14 +20,16 @@ const LoginPage = () => {
     const [password, setPassword] = useState("");
 
 
+
+
     const handleLogin = async () => {
-        const login = await fetch("https://test-two-mu-87.vercel.app/api/login", {
+        const login = await fetch("http://localhost:3001/api/login1", {
             method: "POST",
             body: JSON.stringify({
                 email, password,
             }),
         });
-
+        console.log(login, "login--------");
         if (login.status == 200) {
             router.push("/");
         } else if (login.status == 400) {
@@ -36,6 +38,25 @@ const LoginPage = () => {
 
 
     }
+
+
+
+    // const handleLogin = async () => {
+    //     const login = await fetch("https://test-two-mu-87.vercel.app/api/login", {
+    //         method: "POST",
+    //         body: JSON.stringify({
+    //             email, password,
+    //         }),
+    //     });
+
+    //     if (login.status == 200) {
+    //         router.push("/");
+    //     } else if (login.status == 400) {
+    //         router.push("/login");
+    //     }
+
+
+    // }
 
     return (
         <Container size={420} my={40}>
