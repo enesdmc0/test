@@ -16,6 +16,7 @@ export default async function Home() {
     console.log(isPb, "isPb---------------------")
    
     if (!isPb) {
+        console.log("---No pb auth---")
         redirect("/login");
     }
 

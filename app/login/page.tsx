@@ -23,7 +23,7 @@ const LoginPage = () => {
 
 
     const handleLogin = async () => {
-        const login = await fetch("http://localhost:3001/api/login1", {
+        const login = await fetch("https://test-two-mu-87.vercel.app/api/login1", {
             method: "POST",
             body: JSON.stringify({
                 email, password,
