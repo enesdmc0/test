@@ -33,3 +33,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
         );
     }
 }
+
+
+//@request.auth.id != ""

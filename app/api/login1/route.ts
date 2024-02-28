@@ -46,11 +46,11 @@ export async function POST(req: NextRequest, res: NextResponse) {
     if (pb.authStore.isValid) {
 
       console.log(authData, "--------User already exists, login successful-------");
-      console.log(JSON.stringify(authData?.record), "--------User already exists, login infos-------")
-      cookies().set('user' ,JSON.stringify(authData?.record), {})
+
       cookies().set('pb_auth', pb.authStore.exportToCookie(), {path: "/"})
 
-      return NextResponse.json({message: `Logged in successfully`}, {headers: {"Set-cookie": pb.authStore.exportToCookie()}});
+      return NextResponse.json({message: `Logged in successfully`},
+          {headers: {"Set-cookie": pb.authStore.exportToCookie()}});
 
     } else {
 
@@ -72,7 +72,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
         console.log(authDataAfterCreation, "--------User created and login successful -------");
 
-        cookies().set('user', JSON.stringify(authDataAfterCreation?.record), {})
         cookies().set('pb_auth', pb.authStore.exportToCookie(), {path: "/"})
 
         return NextResponse.json( {message: `Logged in successfully`},  {headers: {"Set-cookie": pb.authStore.exportToCookie()}}

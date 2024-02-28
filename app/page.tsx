@@ -13,7 +13,6 @@ export default async function Home() {
 
     const isPb = await pbAuth();
 
-    console.log(isPb, "isPb---------------------")
    
     if (!isPb) {
         console.log("---No pb auth---")
@@ -21,26 +20,19 @@ export default async function Home() {
     }
 
 
-   
-    const user = JSON.parse(cookies().get("user")?.value as string);
     const auth = JSON.parse(cookies().get("pb_auth")?.value as string);
 
-
     const todos = await isPb?.collection('todos').getFullList();
-
-
-
 
     return (
         <Box bg="gray.9" h="100vh">
             <Container fluid p="xl">
                 <Header token={auth.token} />
                 <Space h="xl"/>
-                <Form userId={user.id} />
+                <Form userId={auth?.model.id}/>
                 <Space h="xl"/>
                 <Todos  todos={todos} />
             </Container>
-
         </Box>
     );
 }

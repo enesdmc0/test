@@ -1,19 +1,9 @@
 "use client"
 import React, {useState} from 'react';
 import {useRouter} from "next/navigation";
-import {
-    TextInput,
-    PasswordInput,
-    Checkbox,
-    Anchor,
-    Paper,
-    Title,
-    Text,
-    Container,
-    Group,
-    Button,
-} from '@mantine/core';
+import {Anchor, Button, Checkbox, Container, Group, Paper, PasswordInput, Text, TextInput, Title,} from '@mantine/core';
 import classes from './login.module.css';
+
 const LoginPage = () => {
     const router = useRouter()
     const [email, setEmail] = useState("");
@@ -23,40 +13,21 @@ const LoginPage = () => {
 
 
     const handleLogin = async () => {
-        const login = await fetch("https://test-two-mu-87.vercel.app/api/login1", {
+        const login = await fetch("http://localhost:3000/api/login1", {
             method: "POST",
             body: JSON.stringify({
                 email, password,
             }),
         });
-        console.log(login, "login--------");
+        console.log(login, "-----login page , login successfull-----")
         if (login.status == 200) {
             router.push("/");
         } else if (login.status == 400) {
             router.push("/login");
         }
 
-
     }
 
-
-
-    // const handleLogin = async () => {
-    //     const login = await fetch("https://test-two-mu-87.vercel.app/api/login", {
-    //         method: "POST",
-    //         body: JSON.stringify({
-    //             email, password,
-    //         }),
-    //     });
-
-    //     if (login.status == 200) {
-    //         router.push("/");
-    //     } else if (login.status == 400) {
-    //         router.push("/login");
-    //     }
-
-
-    // }
 
     return (
         <Container size={420} my={40}>
